@@ -13,7 +13,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 api_key='98e1a4d4f62b6756e8cc514c113448cb'
 movie_db_image_url='https://image.tmdb.org/t/p/w500'
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = 'Api Key'
 Bootstrap(app)
 
 class Movies(db.Model):
