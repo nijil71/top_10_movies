@@ -6,6 +6,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField,FloatField,URLField
 from wtforms.validators import DataRequired
 import requests
+import os
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///movies.db'
@@ -102,4 +103,5 @@ def select():
 # db.session.commit()
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.getenv('PORT'))
+    app.run(debug=True,port=port)
